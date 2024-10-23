@@ -1,14 +1,43 @@
 import arrow from "../assets/to-right.png";
 import profile from "../assets/profilepic.png";
-import trash from "../assets/icons8-trash (2)-1.svg";
 import "./Mainpage.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import bed from "../assets/sleeping (1).png";
-import bathtub from "../assets/bathtub.png";
-import home from "../assets/home-agreement.png";
-import plus from "../assets/plus.png";
+import Image from "./Image";
+import React, { useState } from "react";
 
-function mainpage() {
+function mainpage({ ifclick }) {
+  const [data, setdata] = useState([
+    {
+      title: "Jumerieh Estate",
+      amount: "1000",
+      area: "2000",
+      bedroom: "2",
+      bathroom: "2",
+    },
+    {
+      title: "Eastern Estate",
+      amount: "1890",
+      area: "1800",
+      bedroom: "2",
+      bathroom: "1",
+    },
+    {
+      title: "Roamrio's Estate",
+      amount: "4000",
+      area: "3000",
+      bedroom: "3",
+      bathroom: "2",
+    },
+    {
+      title: "Jumerieh Estate",
+      amount: "1000",
+      area: "2000",
+      bedroom: "2",
+      bathroom: "2",
+    },
+  ]);
+  
+
   return (
     <div className="main-box">
       <div className="top-content">
@@ -169,205 +198,9 @@ function mainpage() {
 
           <div className="container">
             <div className="row">
-              <div className="col-md-6">
-                <div className="col-content">
-                  <div className="content-img">
-                    <div className="delete">
-                      <img
-                        src={trash}
-                        style={{ marginLeft: "7px", marginBottom: "2px" }}
-                      />
-                    </div>
-                  </div>
-
-                  <div className="content-title">
-                    <p>Jmreiah Estate</p>
-                    <p>$ 1268.00</p>
-                  </div>
-
-                  <div className="content-subtitle">
-                    <p>Jmreiah Golf Estate</p>
-                    <div className="dot"></div>
-                    <p>2000.Sq.Ft</p>
-                  </div>
-
-                  <div className="content-icons">
-                    <img src={bed} style={{ height: "20px", width: "20px" }} />
-                    <p>2</p>
-                    <div className="dot"></div>
-                    <img
-                      src={bathtub}
-                      style={{ height: "20px", width: "20px" }}
-                    />
-                    <p>2</p>
-                    <div className="dot"></div>
-                    <img src={home} style={{ height: "20px", width: "20px" }} />
-                    <p>2BHK</p>
-                  </div>
-
-                  <div className="content-customize">
-                    <img
-                      src={plus}
-                      style={{
-                        width: "10px",
-                        height: "10px",
-                        marginTop: "3px",
-                      }}
-                    />
-                    <p>Customize</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-md-6">
-                <div className="col-content">
-                  <div className="content-img">
-                    <div className="delete">
-                      <img
-                        src={trash}
-                        style={{ marginLeft: "7px", marginBottom: "2px" }}
-                      />
-                    </div>
-                  </div>
-
-                  <div className="content-title">
-                    <p>Jmreiah Estate</p>
-                    <p>$ 1268.00</p>
-                  </div>
-
-                  <div className="content-subtitle">
-                    <p>Jmreiah Golf Estate</p>
-                    <div className="dot"></div>
-                    <p>2000.Sq.Ft</p>
-                  </div>
-
-                  <div className="content-icons">
-                    <img src={bed} style={{ height: "20px", width: "20px" }} />
-                    <p>2</p>
-                    <div className="dot"></div>
-                    <img
-                      src={bathtub}
-                      style={{ height: "20px", width: "20px" }}
-                    />
-                    <p>2</p>
-                    <div className="dot"></div>
-                    <img src={home} style={{ height: "20px", width: "20px" }} />
-                    <p>2BHK</p>
-                  </div>
-
-                  <div className="content-customize">
-                    <img
-                      src={plus}
-                      style={{
-                        width: "10px",
-                        height: "10px",
-                        marginTop: "3px",
-                      }}
-                    />
-                    <p>Customize</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-md-6">
-                <div className="col-content">
-                  <div className="content-img">
-                    <div className="delete">
-                      <img
-                        src={trash}
-                        style={{ marginLeft: "7px", marginBottom: "2px" }}
-                      />
-                    </div>
-                  </div>
-
-                  <div className="content-title">
-                    <p>Jmreiah Estate</p>
-                    <p>$ 1268.00</p>
-                  </div>
-
-                  <div className="content-subtitle">
-                    <p>Jmreiah Golf Estate</p>
-                    <div className="dot"></div>
-                    <p>2000.Sq.Ft</p>
-                  </div>
-
-                  <div className="content-icons">
-                    <img src={bed} style={{ height: "20px", width: "20px" }} />
-                    <p>2</p>
-                    <div className="dot"></div>
-                    <img
-                      src={bathtub}
-                      style={{ height: "20px", width: "20px" }}
-                    />
-                    <p>2</p>
-                    <div className="dot"></div>
-                    <img src={home} style={{ height: "20px", width: "20px" }} />
-                    <p>2BHK</p>
-                  </div>
-
-                  <div className="content-customize">
-                    <img
-                      src={plus}
-                      style={{
-                        width: "10px",
-                        height: "10px",
-                        marginTop: "3px",
-                      }}
-                    />
-                    <p>Customize</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-md-6">
-                <div className="col-content">
-                  <div className="content-img">
-                    <div className="delete">
-                      <img
-                        src={trash}
-                        style={{ marginLeft: "7px", marginBottom: "2px" }}
-                      />
-                    </div>
-                  </div>
-
-                  <div className="content-title">
-                    <p>Jmreiah Estate</p>
-                    <p>$ 1268.00</p>
-                  </div>
-
-                  <div className="content-subtitle">
-                    <p>Jmreiah Golf Estate</p>
-                    <div className="dot"></div>
-                    <p>2000.Sq.Ft</p>
-                  </div>
-
-                  <div className="content-icons">
-                    <img src={bed} style={{ height: "20px", width: "20px" }} />
-                    <p>2</p>
-                    <div className="dot"></div>
-                    <img
-                      src={bathtub}
-                      style={{ height: "20px", width: "20px" }}
-                    />
-                    <p>2</p>
-                    <div className="dot"></div>
-                    <img src={home} style={{ height: "20px", width: "20px" }} />
-                    <p>2BHK</p>
-                  </div>
-
-                  <div className="content-customize">
-                    <img
-                      src={plus}
-                      style={{
-                        width: "10px",
-                        height: "10px",
-                        marginTop: "3px",
-                      }}
-                    />
-                    <p>Customize</p>
-                  </div>
-                </div>
-              </div>
+              {data.map((value, index) => (
+                <Image key={index} datas={value} ifclick={ifclick} />
+              ))}
             </div>
           </div>
         </div>

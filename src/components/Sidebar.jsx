@@ -24,25 +24,29 @@ function Sidebar() {
     <div style={{display:"flex"}}>
       <div className="sidebar-box" >
         <img
-          src={sidebararrow}
-          className="sidebar-arrow"
+          src={sidebararrow}      className="sidebar-arrow"
           onClick={handleToggle}
-          style={clicked ? {transform:"rotate(180deg)"}: {transform:"rotate(0deg)"}}
+          style={clicked ? {transform:"rotate(180deg)", transition: "transform 0.5s ease-in-out"}: {transform:"rotate(0deg)",transition:"transform 0.5s ease-in-out"}}
            
         />
         <div className="line"></div>
-        <img src={menu} className="img1" />
-        <img src={groupicon} className="img2" />
-        <img src={taskbar} className="img4" />
-        <img src={ticket} className="img5" />
-        <img src={settings} className="img6" />
-        <img src={drive} className="img7" />
-        <img src={file} className="img8" />
-        <img src={box} className="img9" />
-        <img src={msg} className="img10" />
+        <div className='hover-img'> 
+          <img src={menu} className="img" />
+        </div>
+       <div className='hover-img'>
+          <img src={groupicon} className="img" />
+       </div>
+        
+        <img src={taskbar} className="img" />
+        <img src={ticket} className="img" />
+        <img src={settings} className="img" />
+        <img src={drive} className="img" />
+        <img src={file} className="img" />
+        <img src={box} className="img" />
+        <img src={msg} className="img" />
       </div>
 
-        <div className="sidebar-toggle" style={ clicked ? {display:"block"}:{display:"none"}}>
+        <div className="sidebar-toggle" style={ clicked ? {left:"73px",transition:"0.5s"}:{left:"-300px",transition:"0.5s"}}>
             <div className="sidebar-name">
                 <p>Dashboard</p>
                 <p>Component</p>
